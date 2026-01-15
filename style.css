@@ -24,12 +24,12 @@ font-weight: bold;
 font-family: papyrus
 }
 
-tr {
-  text-align: center;
-  color: black;
-  font-family: baskerville;
+.toni {
+  color: #a590de;
+  font-weight: bold;
+  font-family: baskerville, serif;
 }
 
-tr:hover {
-  color: pink;
+.toni:hover {
+  background-color: #5F2466;
 }
