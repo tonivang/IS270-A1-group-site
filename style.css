@@ -23,3 +23,13 @@ color: #10c8ce;
 font-weight: bold;
 font-family: papyrus
 }
+
+tr {
+  text-align: center;
+  color: black;
+  font-family: baskerville;
+}
+
+tr:hover {
+  color: pink;
+}
