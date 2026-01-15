@@ -10,7 +10,11 @@ font-family:Georgia, 'Times New Roman', Times, serif;
 
 .text {
 color: #884dd9;
-text-align: center;
 font-family: Georgia, serif;
 font-size: 18px;
+}
+
+.name {
+color: #9c3b3b;
+font-weight: bold;
 }
