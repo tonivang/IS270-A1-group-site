@@ -1,6 +1,5 @@
 body {
 text-align: center;
-font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .header {
@@ -16,4 +15,5 @@ font-size: 18px;
 .name {
 color: #9c3b3b;
 font-weight: bold;
+font-family: helvetica
 }
