@@ -27,7 +27,7 @@ font-family: papyrus
 .toni {
   color: #a590de;
   font-weight: bold;
-  font-family: baskerville, serif;
+  font-family: baskerville, garamond, tahoma, serif;
 }
 
 .toni:hover {
