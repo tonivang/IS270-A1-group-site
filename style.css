@@ -19,6 +19,8 @@ font-family: helvetica
 }
 
 .bob {
-font-family: "Comic Sans MS",
-color: #00d1bf
+
+font-family: helvetica;
+  color: #0f91a8;
+  font-weight: bold
 }
