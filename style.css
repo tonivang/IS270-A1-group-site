@@ -31,5 +31,6 @@ font-family: papyrus
 }
 
 .toni:hover {
-  background-color: #5F2466;
+  color: #5F2466;
+  background-color: #a590de;
 }
