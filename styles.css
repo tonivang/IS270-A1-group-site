@@ -1,0 +1,393 @@
+/* GLOBAL RESET
+   - helps keep spacing consistent across browsers
+   - if something looks "off" in spacing, it’s usually NOT this section */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* COLOR SCHEME CUSTOMIZATION
+   - if you want to change the overall color scheme, start HERE first
+   - think of these as “theme settings” */
+:root {
+  --bg: #f4efe6;
+
+  /* accent colors (used for headings, nav, links) */
+  --accent: #7a1f35;
+  --accent-dark: #5a1628;
+
+  /* text colors */
+  --text: #2a0713;
+  --muted: rgba(42, 7, 19, 0.75);
+  --muted-2: rgba(42, 7, 19, 0.6);
+
+  --card: rgba(122, 31, 53, 0.08); /* main card fill */
+  --card-2: rgba(122, 31, 53, 0.05); /* subtle fill for images, etc. */
+  --border: rgba(122, 31, 53, 0.18); /* border around cards */
+
+  /* effects + layout defaults */
+  --shadow: 0 14px 40px rgba(122, 31, 53, 0.12);
+  --radius: 18px;
+  --maxw: 980px;
+
+    /* link colors */
+  --link: #7a1f35;
+  --link-hover: #a62c4c;
+}
+
+/* PAGE BACKGROUND + DEFAULT FONT
+   - if you want a different background “look,” tweak the radial-gradient colors/opacity here
+   - if you want a different site font, change font-family here */
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  background:
+    radial-gradient(800px 500px at 20% 20%, rgba(122,31,53,0.10), transparent 60%),
+    radial-gradient(700px 450px at 80% 70%, rgba(122,31,53,0.08), transparent 55%),
+    var(--bg);
+}
+
+/* MAIN PAGE WRAPPER
+   - controls the max width and the “page padding”
+   - if content feels too wide/narrow, edit --maxw (in :root) or padding here */
+.wrapper {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 28px 18px 70px;
+}
+
+/* CARD CONTAINERS
+   - any section wrapped with .card gets the glass panel look
+   - to make cards more/less transparent, change --card in :root */
+.card {
+  margin-top: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+
+/* TOP NAV BAR
+   - if nav feels too tall/short, change padding
+   - if you want more contrast, increase the background alpha */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(122,31,53,0.06);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7a1f35, #a62c4c);
+}
+
+.brand span {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--accent-dark);
+}
+
+/* NAV LINKS (Home / LIS / AI)
+   - rdit font-size/padding if buttons feel too big
+   - active styles control which page is highlighted */
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(122,31,53,0.18);
+  background: rgba(122,31,53,0.06);
+  transition: all 0.2s ease;
+}
+
+.nav a:hover {
+  background: rgba(122,31,53,0.14);
+}
+
+.nav a.active {
+  background: rgba(122,31,53,0.18);
+  color: var(--accent-dark);
+}
+
+/* HERO SECTION (page title area)
+   - controls spacing around the title block
+   - if your header feels too tall, lower the padding */
+.hero {
+  padding: 46px 42px;
+}
+
+/* main title size
+   - clamp(min, responsive, max): adjust min/max if you want bigger/smaller headings */
+.hero h1 {
+  font-size: clamp(38px, 4.6vw, 55px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+/* gradient highlight on "IS 270"
+   - change colors here if you want the accent text to be solid or different tones */
+.hero .accent {
+  background: linear-gradient(90deg, #7a1f35, #a62c4c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* team names text under the title */
+.hero p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* thin divider line in hero
+   - if you want it stronger, increase alpha in rgba() */
+.rule {
+  height: 1px;
+  width: 100%;
+  margin: 22px 0 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(122,31,53,0.35),
+    transparent
+  );
+}
+
+.content {
+  padding: 0 42px 46px;
+}
+
+/* SECTION BLOCKS
+   - spacing between each content section. */
+.section {
+  margin-top: 34px;
+}
+
+/* section headings (Role Overview, etc.) */
+.section h2 {
+  font-size: 16px;
+  font-weight: 800;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: var(--accent-dark);
+}
+
+/* paragraph text */
+.section p {
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: justify;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+/* LIBRARIAN PROFILE BLOCK
+   - controls the headshot + name/role layout
+   - if you want name aligned higher/lower, tweak align-items */
+.profile {
+  display: flex;
+  gap: 22px;
+  align-items: flex-end;
+  margin-top: 32px;
+}
+
+/* profile image sizing */
+.profile img {
+  width: 150px;
+  border-radius: 14px;
+  border: 1px solid rgba(122,31,53,0.18);
+  background: var(--card-2);
+}
+
+/* name styling */
+.profile .name {
+  font-size: 20px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* job title styling */
+.profile .role {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+/* divider line inside profile */
+.profile .line {
+  height: 1px;
+  width: 100%;
+  margin: 12px 0 10px;
+  background: rgba(122,31,53,0.35);
+}
+
+.profile .org {
+  color: var(--muted-2);
+}
+
+/* TWO-COLUMN LAYOUT (text + image)
+   - right column is fixed at 300px by default
+   - if images should be larger/smaller, change the 300px values here and in img width */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* reverse layout (image on left, text on right) */
+.two-col.reverse {
+  grid-template-columns: 300px 1fr;
+}
+
+/* image container for image + caption so credit stays under image */
+.image-block {
+  display: flex;
+  flex-direction: column;
+}
+
+/* image sizing */
+.image-block img,
+.two-col img {
+  width: 300px;
+  border-radius: 16px;
+  border: 1px solid rgba(122,31,53,0.18);
+  object-fit: cover;
+}
+
+/* credit styling */
+.img-credit {
+  font-size: 13px !important; /* don't remove !important, i couldn't figure out how to make the font smaller without this */
+  font-style: italic;
+  color: var(--muted-2);
+  margin-top: 8px;
+}
+
+/* credit link styling */
+.img-credit a {
+  color: var(--link);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.img-credit a:hover {
+  color: var(--link-hover);
+}
+
+/* AI HEADER BLOCK
+   - this controls the title/subtitle/link formatting at the top of ai.html */
+.ai-header {
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 10px;
+}
+
+.ai-title {
+  font-size: 18px;
+  font-weight: 800;
+  font-style: italic;
+  margin-bottom: 6px;
+  color: var(--accent-dark);
+}
+
+.ai-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.ai-rule {
+  height: 1px;
+  width: min(520px, 90%);
+  margin: 0 auto 14px;
+  background: rgba(122,31,53,0.35);
+}
+
+.ai-link {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.ai-link:hover {
+  color: var(--link-hover);
+}
+
+/* REVEAL ANIMATION (slide open under the rule)
+   - this is what makes content “unfold” from under the hero divider
+   - adjust the max-height if your content is getting cut off */
+.reveal {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: revealDown 0.9s ease forwards;
+  animation-delay: 0.1s;
+  transform-origin: top;
+}
+
+
+@keyframes revealDown {
+  to {
+    max-height: 4000px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE SETTINGS
+   - these rules make the layout readable on smaller screens */
+@media (max-width: 860px) {
+  .hero, .content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .two-col,
+  .two-col.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col img,
+  .image-block img {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero {
+    padding: 34px 22px;
+  }
+
+  .profile img {
+    width: 110px;
+  }
+}
