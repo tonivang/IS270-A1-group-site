@@ -355,13 +355,13 @@ body {
 
 /* ANNOTATED BIBLIOGRAPHY FORMATTING */
 
-.bib-source h2{
-   line-height: 2
-   font-size: 16px;
-   font-weight: 800;
-   font-style: bold;
-   text-indent: -40px /* pulls first line back to the left */
-   margin-left: 40px /* indents entire paragraph */
+.bib-source h2 {
+  font-size: 16px;
+  font-weight: 800;
+  text-indent: -40px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  color: var(--accent-dark);
 }
    
 
