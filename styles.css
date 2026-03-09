@@ -357,8 +357,11 @@ body {
 
 .bib-source {
    line-height: 2
-   padding-left: 25px /* indents entire paragraph */
-   text-indent: -25px /* pulls first line back to the left */
+   font-size: 16px;
+   font-weight: 800;
+   font-style: bold;
+   padding-left: 40px /* indents entire paragraph */
+   text-indent: -40px /* pulls first line back to the left */
 }
    
 
