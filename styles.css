@@ -353,6 +353,14 @@ body {
   transform-origin: top;
 }
 
+/* ANNOTATED BIBLIOGRAPHY FORMATTING */
+
+.bib-source {
+   line-height: 2
+   padding-left: 25px /* indents entire paragraph */
+   text-indent: -25px /* pulls first line back to the left */
+}
+   
 
 @keyframes revealDown {
   to {
