@@ -360,8 +360,8 @@ body {
    font-size: 16px;
    font-weight: 800;
    font-style: bold;
-   padding-left: 40px /* indents entire paragraph */
    text-indent: -40px /* pulls first line back to the left */
+   margin-left: 40px /* indents entire paragraph */
 }
    
 
