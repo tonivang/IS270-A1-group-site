@@ -340,19 +340,6 @@ body {
   color: var(--link-hover);
 }
 
-/* REVEAL ANIMATION (slide open under the rule)
-   - this is what makes content “unfold” from under the hero divider
-   - adjust the max-height if your content is getting cut off */
-.reveal {
-  overflow: hidden;
-  max-height: 10000;
-  opacity: 0;
-  transform: translateY(-10px);
-  animation: revealDown 0.9s ease forwards;
-  animation-delay: 0.1s;
-  transform-origin: top;
-}
-
 /* ANNOTATED BIBLIOGRAPHY FORMATTING */
 
 .bib-source h2 {
@@ -367,11 +354,24 @@ body {
 .double-space {
   line-height: 2;
 }
-   
 
+/* REVEAL ANIMATION (slide open under the rule)
+   - this is what makes content “unfold” from under the hero divider
+   - adjust the max-height if your content is getting cut off */
+.reveal {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: revealDown 0.9s ease forwards;
+  animation-delay: 0.1s;
+  transform-origin: top;
+}
+
+   
 @keyframes revealDown {
   to {
-    max-height: 4000px;
+    max-height: 10000px;
     opacity: 1;
     transform: translateY(0);
   }
