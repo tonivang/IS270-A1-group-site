@@ -360,6 +360,7 @@ body {
   font-weight: 800;
   text-indent: -40px;
   margin-left: 40px;
+  margin-top: 16px;
   color: var(--accent-dark);
 }
 
