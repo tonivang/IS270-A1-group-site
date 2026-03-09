@@ -360,7 +360,7 @@ body {
    - adjust the max-height if your content is getting cut off */
 .reveal {
   overflow: hidden;
-  max-height: 0;
+  max-height: 100000;
   opacity: 0;
   transform: translateY(-10px);
   animation: revealDown 0.9s ease forwards;
@@ -371,7 +371,7 @@ body {
    
 @keyframes revealDown {
   to {
-    max-height: 10000px;
+    max-height: 100000px;
     opacity: 1;
     transform: translateY(0);
   }
