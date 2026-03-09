@@ -355,7 +355,7 @@ body {
 
 /* ANNOTATED BIBLIOGRAPHY FORMATTING */
 
-.bib-source {
+.bib-source h2{
    line-height: 2
    font-size: 16px;
    font-weight: 800;
