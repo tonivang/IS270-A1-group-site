@@ -345,7 +345,7 @@ body {
    - adjust the max-height if your content is getting cut off */
 .reveal {
   overflow: hidden;
-  max-height: 1000;
+  max-height: 10000;
   opacity: 0;
   transform: translateY(-10px);
   animation: revealDown 0.9s ease forwards;
